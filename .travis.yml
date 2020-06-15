@@ -4,4 +4,7 @@ go:
   - 1.14.x
 
 script:
-  - go test ./...
+  - https://github.com/codecov/example-go
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
