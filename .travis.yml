@@ -3,11 +3,9 @@ language: go
 go:
   - 1.14.x
 
-before_install:
-  - go get -t -v ./...
-
 script:
-  - ./go_test
+  - go get -t -v ./...
+  - bash ./go_test.sh
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
