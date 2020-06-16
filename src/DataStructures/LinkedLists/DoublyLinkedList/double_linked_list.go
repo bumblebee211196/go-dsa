@@ -1,7 +1,5 @@
 package DoublyLinkedList
 
-import "fmt"
-
 type Node struct {
 	Val  int
 	Prev *Node
@@ -35,14 +33,6 @@ func ListToSlice(list *DoublyLinkedList) []int {
 		res = append(res, curr.Val)
 	}
 	return res
-}
-
-func PrintList(list *DoublyLinkedList) {
-	t := list.Head
-	for ; t != nil; t = t.Next {
-		fmt.Printf("%v <==> ", t.Val)
-	}
-	fmt.Println()
 }
 
 // Adds the node to the head
