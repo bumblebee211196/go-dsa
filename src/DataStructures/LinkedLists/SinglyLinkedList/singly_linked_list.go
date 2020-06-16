@@ -1,7 +1,5 @@
 package SinglyLinkedList
 
-import "fmt"
-
 type Node struct {
 	Val  int
 	Next *Node
@@ -26,14 +24,6 @@ func SliceToList(values []int) *SinglyLinkedList {
 		newList.AddToHead(values[i])
 	}
 	return newList
-}
-
-func PrintList(list *SinglyLinkedList) {
-	t := list.Head
-	for ; t != nil; t = t.Next {
-		fmt.Printf("%v --> ", t.Val)
-	}
-	fmt.Println()
 }
 
 func ListToSlice(list *SinglyLinkedList) []int {
