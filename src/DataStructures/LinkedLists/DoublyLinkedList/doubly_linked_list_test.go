@@ -62,7 +62,7 @@ func TestDoublyLinkedList_RemoveHead(t *testing.T) {
 	}{
 		{"TestCase", SliceToList([]int{}), SliceToList([]int{})},
 		{"TestCase", SliceToList([]int{6}), SliceToList([]int{})},
-		{"TestCase", SliceToList([]int{6, 7, 8, 9}), SliceToList([]int{2, 3, 4})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), SliceToList([]int{7, 8, 9})},
 	}
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i+1), func(t *testing.T) {
