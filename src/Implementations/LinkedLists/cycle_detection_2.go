@@ -10,8 +10,8 @@ package LinkedLists
 // three nodes
 //
 // 			1 --> 2 --> 3 --> 4 --> 5
-//                           /|\	|
-//                            -------
+//                              /|\    |
+//                               -------
 //
 // As we visit the first node we change it to -1, then we move to the next node.
 // If there is a cycle we will definitely visit the marked nodes. If not the loop
@@ -20,16 +20,17 @@ package LinkedLists
 //
 // Time Complexity: O(n)	Space Complexity: O(1)
 // Note: This method will only work if all the values in the list are either positive/negative.
-func HasCycle1(head *ListNode) bool {
+func HasCycle21(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
-		return false
+		return nil
 	}
-	curr, hasCycle := head, false
+	curr := head
+	var ans *ListNode
 	for ; curr != nil; curr = curr.Next {
 		if curr.Val > 0 {
 			curr.Val = -curr.Val
 		} else {
-			hasCycle = true
+			ans = curr
 			break
 		}
 	}
@@ -41,7 +42,7 @@ func HasCycle1(head *ListNode) bool {
 			curr.Val = -curr.Val
 		}
 	}
-	return hasCycle
+	return ans
 }
 
 // Solution 2: Using Floyd's algorithm
@@ -49,17 +50,26 @@ func HasCycle1(head *ListNode) bool {
 // Finally the 2 pointers would meet each other if there is a cycle or the fast pointer would
 // encounter null if it’s not a cycle.
 //
-// Time Complexity: O(n)	Space Complexity: O(1)
-func HasCycle2(head *ListNode) bool {
+// Time Compexity: O(n)	Space Complexity: O(1)
+func HasCycle22(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
-		return false
+		return nil
 	}
-	slow, fast := head, head.Next
-	for fast != nil && fast.Next != nil {
-		if slow == fast {
-			return true
-		}
+	slow, fast := head, head
+	hasCycle := false
+	for slow != nil && fast != nil && fast.Next != nil {
 		slow, fast = slow.Next, fast.Next.Next
+		if slow == fast {
+			hasCycle = true
+			break
+		}
 	}
-	return false
+	if !hasCycle {
+		return nil
+	}
+	slow = head
+	for slow != fast {
+		slow, fast = slow.Next, fast.Next
+	}
+	return slow
 }
