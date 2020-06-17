@@ -13,8 +13,8 @@ func TestDoublyLinkedList_AddToHead(t *testing.T) {
 		val    int
 		expect *DoublyLinkedList
 	}{
-		{"TestCase", SliceToList([]int{}), 5, SliceToList([]int{5})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 5, SliceToList([]int{5, 1, 2, 3, 4})},
+		{"TestCase", SliceToList([]int{}), 10, SliceToList([]int{10})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 5, SliceToList([]int{5, 6, 7, 8, 9})},
 	}
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i+1), func(t *testing.T) {
@@ -36,11 +36,11 @@ func TestDoublyLinkedList_AddToIndex(t *testing.T) {
 		val    int
 		expect *DoublyLinkedList
 	}{
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 0, 5, SliceToList([]int{5, 1, 2, 3, 4})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 1, 5, SliceToList([]int{1, 5, 2, 3, 4})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 2, 5, SliceToList([]int{1, 2, 5, 3, 4})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 3, 5, SliceToList([]int{1, 2, 3, 5, 4})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), 4, 5, SliceToList([]int{1, 2, 3, 4, 5})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 0, 5, SliceToList([]int{5, 6, 7, 8, 9})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 1, 5, SliceToList([]int{6, 5, 7, 8, 9})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 2, 5, SliceToList([]int{6, 7, 5, 8, 9})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 3, 5, SliceToList([]int{6, 7, 8, 5, 9})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), 4, 5, SliceToList([]int{6, 7, 8, 9, 5})},
 	}
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i+1), func(t *testing.T) {
@@ -61,8 +61,8 @@ func TestDoublyLinkedList_RemoveHead(t *testing.T) {
 		expect *DoublyLinkedList
 	}{
 		{"TestCase", SliceToList([]int{}), SliceToList([]int{})},
-		{"TestCase", SliceToList([]int{1}), SliceToList([]int{})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4}), SliceToList([]int{2, 3, 4})},
+		{"TestCase", SliceToList([]int{6}), SliceToList([]int{})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9}), SliceToList([]int{2, 3, 4})},
 	}
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i+1), func(t *testing.T) {
@@ -83,11 +83,11 @@ func TestDoublyLinkedList_RemoveFromIndex(t *testing.T) {
 		index  int
 		expect *DoublyLinkedList
 	}{
-		{"TestCase", SliceToList([]int{1, 2, 3, 4, 5}), 0, SliceToList([]int{2, 3, 4, 5})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4, 5}), 1, SliceToList([]int{1, 3, 4, 5})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4, 5}), 2, SliceToList([]int{1, 2, 4, 5})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4, 5}), 3, SliceToList([]int{1, 2, 3, 5})},
-		{"TestCase", SliceToList([]int{1, 2, 3, 4, 5}), 4, SliceToList([]int{1, 2, 3, 4})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9, 10}), 0, SliceToList([]int{7, 8, 9, 10})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9, 10}), 1, SliceToList([]int{6, 8, 9, 10})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9, 10}), 2, SliceToList([]int{6, 7, 9, 10})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9, 10}), 3, SliceToList([]int{6, 7, 8, 10})},
+		{"TestCase", SliceToList([]int{6, 7, 8, 9, 10}), 4, SliceToList([]int{6, 7, 8, 9})},
 	}
 	for i, c := range cases {
 		t.Run(c.name+strconv.Itoa(i+1), func(t *testing.T) {
