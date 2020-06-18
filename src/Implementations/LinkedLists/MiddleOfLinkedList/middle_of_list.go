@@ -8,6 +8,8 @@ import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
 // Solution 1: Using the length of the linked list.
 // We can calculate the length of the linked list and traverse the list till half of the length
 // value. The node at the half length is the answer
+//
+// Time Complexity: O(n)	Space Complexity: O(1)
 func MidOfLinkedList1(head *ListNode) *ListNode {
 	if head == nil {
 		return nil
@@ -31,6 +33,8 @@ func MidOfLinkedList1(head *ListNode) *ListNode {
 // We will two pointers: slow and fast. The faster pointer traverses twice the speed of the slow
 // pointer. When the fast pointer reaches the end, the node which the slow pointer points is the
 // answer.
+//
+// Time Complexity: O(n)	Space Complexity: O(1)
 func MidOfLinkedList2(head *ListNode) *ListNode {
 	if head == nil {
 		return nil

@@ -8,6 +8,8 @@ import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists/R
 // Solution: We find the mid point of the linked list. Break the list into
 // two parts. Reverse one of the linked list and compare both of them.
 // We can use Floyd's algorithm to find the mid point of the list.
+//
+// Time Complexity: O(n)	Space Complexity: O(1)
 func IsPalindrome(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return true

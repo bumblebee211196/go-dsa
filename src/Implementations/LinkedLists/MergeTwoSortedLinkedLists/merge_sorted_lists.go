@@ -10,6 +10,8 @@ import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
 // pointer. Similar is the case for the other pointer. We do this until any one of them reaches
 // the end. When one fo the list reaches the end, we just the append the remaining part(if left any)
 // of the other list to the new list and return the head of the new list.
+//
+// Time Complexity: O(m+n)	Space Complexity: O(m+n)
 func MergeSortedLinkedLists(head1, head2 *ListNode) *ListNode {
 	newHead := &ListNode{Val: -1}
 	curr := newHead
