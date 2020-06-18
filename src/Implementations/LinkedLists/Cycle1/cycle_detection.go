@@ -1,4 +1,6 @@
-package LinkedLists
+package Cycle1
+
+import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
 
 // Problem statement: Determine if a cycle exists in the given list of nodes
 
