@@ -1,6 +1,7 @@
-package LinkedLists
+package Cycle2
 
 import (
+	. "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
 	"reflect"
 	"strconv"
 	"testing"

@@ -1,4 +1,7 @@
-package LinkedLists
+package Palindrome
+
+import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
+import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists/Reverse"
 
 // Problem Statement: Check if the given linked list is a palindrome or no
 

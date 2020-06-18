@@ -1,4 +1,6 @@
-package LinkedLists
+package Reverse
+
+import . "github.com/bumblebee211996/go-ds-daa/src/Implementations/LinkedLists"
 
 // Problem statement: Reverse a linked list
 
