@@ -11,9 +11,9 @@ func TestHasCycle21(t *testing.T) {
 		input  *ListNode
 		expect *ListNode
 	}{
-		{SliceToList([]int{1}, false), nil},
-		{SliceToList([]int{1, 2, 3, 4, 5}, true), &ListNode{Val: 2}},
-		{SliceToList([]int{1, 2, 3, 4, 5}, false), nil},
+		{SliceToListWithCycle([]int{1}, false), nil},
+		{SliceToListWithCycle([]int{1, 2, 3, 4, 5}, true), &ListNode{Val: 2}},
+		{SliceToListWithCycle([]int{1, 2, 3, 4, 5}, false), nil},
 	}
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
@@ -31,9 +31,9 @@ func TestHasCycle22(t *testing.T) {
 		input  *ListNode
 		expect *ListNode
 	}{
-		{SliceToList([]int{1}, false), nil},
-		{SliceToList([]int{1, 2, 3, 4, 5}, true), &ListNode{Val: 2}},
-		{SliceToList([]int{1, 2, 3, 4, 5}, false), nil},
+		{SliceToListWithCycle([]int{1}, false), nil},
+		{SliceToListWithCycle([]int{1, 2, 3, 4, 5}, true), &ListNode{Val: 2}},
+		{SliceToListWithCycle([]int{1, 2, 3, 4, 5}, false), nil},
 	}
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
