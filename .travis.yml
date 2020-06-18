@@ -4,6 +4,7 @@ go:
   - 1.14.x
 
 script:
+  - go install ./...
   - go get -t -v ./...
   - bash ./go_test.sh
 
