@@ -1,7 +1,5 @@
 # go-ds-daa
 
-![Go](https://github.com/bumblebee211196/go-dsa/blob/dev/resources/Go-Logo_LightBlue.png?raw=true)
-
 [![CodeFactor](https://www.codefactor.io/repository/github/bumblebee211196/go-dsa/badge)](https://www.codefactor.io/repository/github/bumblebee211196/go-dsa)
 [![codecov](https://codecov.io/gh/bumblebee211196/go-ds-daa/branch/master/graph/badge.svg)](https://codecov.io/gh/bumblebee211196/go-ds-daa)
 [![Build Status](https://travis-ci.com/bumblebee211196/go-ds-daa.svg?branch=master)](https://travis-ci.com/bumblebee211196/go-ds-daa)
