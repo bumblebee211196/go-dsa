@@ -33,6 +33,10 @@ func TestIntersectingNode1(t *testing.T) {
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 3})
 	h1, h2 = MakeIntersectionList(SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8}))
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 5})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := IntersectingNode1(c.input1, c.input2)
@@ -52,6 +56,10 @@ func TestIntersectingNode2(t *testing.T) {
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 3})
 	h1, h2 = MakeIntersectionList(SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8}))
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 5})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := IntersectingNode2(c.input1, c.input2)
@@ -71,6 +79,10 @@ func TestIntersectingNode3(t *testing.T) {
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 3})
 	h1, h2 = MakeIntersectionList(SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8}))
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 5})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := IntersectingNode3(c.input1, c.input2)
@@ -90,6 +102,10 @@ func TestIntersectingNode4(t *testing.T) {
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 3})
 	h1, h2 = MakeIntersectionList(SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8}))
 	cases = append(cases, testcase{input1: h1, input2: h2, expect: 5})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{7, 8})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
+	h1, h2 = SliceToList([]int{3, 4, 5, 6}), SliceToList([]int{})
+	cases = append(cases, testcase{input1: h1, input2: h2, expect: -1})
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := IntersectingNode4(c.input1, c.input2)
