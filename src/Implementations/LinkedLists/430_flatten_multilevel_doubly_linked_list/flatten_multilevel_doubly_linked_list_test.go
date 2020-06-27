@@ -39,6 +39,9 @@ func TestFlatten(t *testing.T) {
 	l1.Child = l2
 	cases = append(cases, testcases{l1, sliceToList([]int{1, 3, 2})})
 	cases = append(cases, testcases{nil, nil})
+	l1, l2 = sliceToList([]int{1, 2}), sliceToList([]int{3})
+	l1.Next.Child = l2
+	cases = append(cases, testcases{l1, sliceToList([]int{1, 2, 3})})
 	for i, c := range cases {
 		t.Run("TestCase"+" "+strconv.Itoa(i), func(t *testing.T) {
 			got := Flatten(c.input)
