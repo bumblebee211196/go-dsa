@@ -1,6 +1,7 @@
-package LinkedLists
+package reverse_linked_list
 
 import (
+	. "github.com/bumblebee211996/go-dsa/src/Implementations/LinkedLists"
 	"reflect"
 	"strconv"
 	"testing"
@@ -20,7 +21,7 @@ func TestReverseLinkedList1(t *testing.T) {
 			got := ReverseLinkedList1(c.input)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("Expected: %v, got %v for input %v",
-					c.expect, got, c.input)
+					ListToSlice(c.expect), got, ListToSlice(c.input))
 			}
 		})
 	}
@@ -40,7 +41,7 @@ func TestReverseLinkedList2(t *testing.T) {
 			got := ReverseLinkedList2(c.input)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("Expected: %v, got %v for input %v",
-					c.expect, got, c.input)
+					ListToSlice(c.expect), got, ListToSlice(c.input))
 			}
 		})
 	}

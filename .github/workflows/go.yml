@@ -25,5 +25,8 @@ jobs:
     - name: Get dependencies
       run: go mod download
 
+    - name: Go install
+      run: go install ./...
+
     - name: Test
       run: sh go_test.sh

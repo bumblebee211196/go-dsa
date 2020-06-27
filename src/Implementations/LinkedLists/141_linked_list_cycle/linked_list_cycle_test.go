@@ -1,6 +1,7 @@
-package LinkedLists
+package linked_list_cycle
 
 import (
+	. "github.com/bumblebee211996/go-dsa/src/Implementations/LinkedLists"
 	"reflect"
 	"strconv"
 	"testing"
@@ -20,7 +21,7 @@ func TestHasCycle1(t *testing.T) {
 			got := HasCycle1(c.input)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("Expected: %v, got %v for input %v",
-					c.expect, got, c.input)
+					c.expect, got, ListToSlice(c.input))
 			}
 		})
 	}
@@ -40,7 +41,7 @@ func TestHasCycle2(t *testing.T) {
 			got := HasCycle2(c.input)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("Expected: %v, got %v for input %v",
-					c.expect, got, c.input)
+					c.expect, got, ListToSlice(c.input))
 			}
 		})
 	}

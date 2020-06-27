@@ -1,3 +1,3 @@
-module github.com/bumblebee211996/go-ds-daa
+module github.com/bumblebee211996/go-dsa
 
 go 1.14

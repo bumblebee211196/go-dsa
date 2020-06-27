@@ -1,6 +1,7 @@
-package LinkedLists
+package pallindrom_linked_list
 
 import (
+	. "github.com/bumblebee211996/go-dsa/src/Implementations/LinkedLists"
 	"reflect"
 	"strconv"
 	"testing"
@@ -23,7 +24,7 @@ func TestIsPalindrome(t *testing.T) {
 			got := IsPalindrome(c.input)
 			if !reflect.DeepEqual(got, c.expect) {
 				t.Fatalf("Expected: %v, got %v for input %v",
-					c.expect, got, c.input)
+					c.expect, got, ListToSlice(c.input))
 			}
 		})
 	}
