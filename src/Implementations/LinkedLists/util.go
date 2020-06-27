@@ -30,3 +30,18 @@ func SliceToList(values []int) *ListNode {
 	}
 	return head
 }
+
+func CopyList(head *ListNode) *ListNode {
+	return SliceToList(ListToSlice(head))
+}
+
+func ListToSlice(head *ListNode) []int {
+	if head == nil {
+		return []int{}
+	}
+	curr, values := head, make([]int, 0)
+	for ; curr != nil; curr = curr.Next {
+		values = append(values, curr.Val)
+	}
+	return values
+}
