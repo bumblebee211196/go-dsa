@@ -13,6 +13,7 @@ func TestAddTwoNumbers(t *testing.T) {
 		input2 *ListNode
 		expect *ListNode
 	}{
+		{SliceToList([]int{2, 2}), SliceToList([]int{8, 8}), SliceToList([]int{0, 1, 1})},
 		{SliceToList([]int{2, 4, 3}), SliceToList([]int{5, 6, 4}), SliceToList([]int{7, 0, 8})},
 		{SliceToList([]int{1, 1}), SliceToList([]int{9, 9, 4}), SliceToList([]int{0, 1, 5})},
 		{SliceToList([]int{5, 1, 9, 2, 6}), SliceToList([]int{4, 8, 3, 7}), SliceToList([]int{9, 9, 2, 0, 7})},
